@@ -1,0 +1,363 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helfer Bot – Discord Bot</title>
+
+    <!-- Browser-Tab Bild -->
+    <link rel="icon" type="image/png" href="helpfer bot bild.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d12;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #11141c;
+            border-bottom: 1px solid #252a35;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #b8becb;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .bot-icon {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            box-shadow: 0 0 40px rgba(114, 137, 218, 0.35);
+        }
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #7289da;
+        }
+
+        .description {
+            font-size: 20px;
+            color: #aeb4c0;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #5865f2;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #4752c4;
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            background: #1d212b;
+            color: white;
+            border: 1px solid #303643;
+        }
+
+        .secondary:hover {
+            background: #272c38;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px 100px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #151821;
+            border: 1px solid #252a35;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #5865f2;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9da4b2;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #11141c;
+            border-top: 1px solid #252a35;
+            padding: 30px 20px;
+            text-align: center;
+            color: #777f8e;
+        }
+
+        footer a {
+            color: #8ea1e1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            nav {
+                gap: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="favicon.png" alt="Helfer Bot">
+        <span>Helfer Bot</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+        <a href="privacy.html">Datenschutz</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="favicon.png"
+            alt="Helfer Bot"
+            class="bot-icon"
+        >
+
+        <h1>
+            Dein <span class="highlight">Helfer Bot</span>
+        </h1>
+
+        <p class="description">
+            Ein vielseitiger Discord-Bot für deinen Server.
+            Moderation, Support, Economy, Fun und viele weitere
+            Funktionen in einem einzigen Bot.
+        </p>
+
+        <div class="buttons">
+
+            <!-- HIER DEINEN BOT-EINLADUNGSLINK EINTRAGEN -->
+            <a
+                href="DEIN_DISCORD_BOT_LINK"
+                class="button primary"
+                target="_blank"
+            >
+                🤖 Bot hinzufügen
+            </a>
+
+            <a
+                href="terms.html"
+                class="button secondary"
+            >
+                📜 Nutzungsbedingungen
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <h2>Was kann der Bot?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Moderation</h3>
+            <p>
+                Hilfreiche Moderationsbefehle für deinen Discord-Server.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💰</div>
+            <h3>Economy</h3>
+            <p>
+                Verdiene Coins mit Befehlen wie /work und verwalte dein Guthaben.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎫</div>
+            <h3>Support</h3>
+            <p>
+                Organisiere Support-Anfragen und hilf deinen Server-Mitgliedern.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎮</div>
+            <h3>Fun</h3>
+            <p>
+                Verschiedene unterhaltsame Befehle für deine Community.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">ℹ️</div>
+            <h3>Information</h3>
+            <p>
+                Server-, User- und Botinformationen schnell abrufen.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Server</h3>
+            <p>
+                Praktische Funktionen zur Verwaltung deines Discord-Servers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Helfer Bot
+    </p>
+
+    <br>
+
+    <a href="Nutzungsbedingungen.html">
+        Nutzungsbedingungen
+    </a>
+
+    <a href="datenschutzerklärung.html">
+        Datenschutzerklärung
+    </a>
+
+</footer>
+
+</body>
+</html>
+```
